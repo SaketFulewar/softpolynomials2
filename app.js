@@ -3,9 +3,9 @@ const app = express();
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(express.static('public'));
 // -----------------------------------------------------------------MY GLOBAL VARIABLES
 let formData;
+app.use(express.static("src"));
 
 app.get("/", (req,res)=>{
     res.sendFile(__dirname + "/index.html");
